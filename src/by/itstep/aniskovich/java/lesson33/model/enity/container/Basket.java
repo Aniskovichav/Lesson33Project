@@ -7,9 +7,13 @@ import by.itstep.aniskovich.java.lesson33.model.enity.Orange;
 public class Basket {
     public static final int DEFAULT_SIZE = 10;
 
-    public Orange[] oranges;
-    public Milk[] milks;
-    public Bread[] breads;
+    private Orange[] oranges;
+    private Milk[] milks;
+    private Bread[] breads;
+
+    private int sizeMilk = 0;
+    private int sizeBread = 0;
+    private int sizeOrange = 0;
 
     public Basket() {
             oranges = new Orange[DEFAULT_SIZE];
@@ -19,9 +23,46 @@ public class Basket {
 
     public Basket(Orange[] oranges, Milk[] milks, Bread[] breads) {
         this.oranges = oranges;
+        sizeOrange = oranges.length;
         this.milks = milks;
+        sizeMilk = milks.length;
         this.breads = breads;
+        sizeBread = breads.length;
     }
 
+    public int getSizeMilk() {
+        return sizeMilk;
+    }
 
+    public int getSizeBread() {
+        return sizeBread;
+    }
+
+    public int getSizeOrange() {
+        return sizeOrange;
+    }
+
+    public Orange[] getOranges() {
+        return oranges;
+    }
+
+    public void setOranges(Orange[] oranges) {
+        this.oranges = oranges;
+    }
+
+    public Milk[] getMilks() {
+        return milks;
+    }
+
+    public void setMilks(Milk[] milks) {
+        this.milks = milks;
+    }
+
+    public Bread[] getBreads() {
+        return breads;
+    }
+
+    public void setBreads(Bread[] breads) {
+        this.breads = breads;
+    }
 }
