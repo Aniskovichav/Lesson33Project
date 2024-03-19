@@ -1,17 +1,17 @@
 package by.itstep.aniskovich.java.lesson33.model.enity;
 
-public class Bread {
+public class Bread extends Product {
     private String color;
     private String flour;
-    private double price;
 
     public Bread() {
+        super();
     }
 
     public Bread(String color, String flour, double price) {
+        super(price);
         this.color = color;
         this.flour = flour;
-        this.price = price;
     }
 
     public String getColor() {
@@ -30,20 +30,12 @@ public class Bread {
         this.flour = flour;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     @Override
     public String toString() {
         return "Bread{" +
-                "color='" + color + '\'' +
-                ", flour='" + flour + '\'' +
-                ", price=" + price +
+                "color =" + color + '\'' +
+                ", flour =" + flour + '\'' +
+                ", price = " + super.toString() +
                 '}';
     }
 }

@@ -1,17 +1,17 @@
 package by.itstep.aniskovich.java.lesson33.model.enity;
 
-public class Orange {
+public class Orange extends Product {
     private int diameter;
     private int vitaminC;
-    private double cost;
 
     public Orange() {
+        super();
     }
 
-    public Orange(int diameter, int vitaminC, double cost) {
+    public Orange(int diameter, int vitaminC, double cost, double price) {
+        super(price);
         this.diameter = diameter;
         this.vitaminC = vitaminC;
-        this.cost = cost;
     }
 
     public int getDiameter() {
@@ -30,20 +30,13 @@ public class Orange {
         this.vitaminC = vitaminC;
     }
 
-    public double getCost() {
-        return cost;
-    }
-
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
 
     @Override
     public String toString() {
         return "Orange{" +
                 "diameter=" + diameter +
                 ", vitaminC=" + vitaminC +
-                ", cost=" + cost +
+                ", " + super.toString() +
                 '}';
     }
 }

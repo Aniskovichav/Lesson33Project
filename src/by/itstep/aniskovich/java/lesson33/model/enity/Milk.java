@@ -1,17 +1,17 @@
 package by.itstep.aniskovich.java.lesson33.model.enity;
 
-public class Milk {
+public class Milk extends Product {
     private double volume;
     private double fat;
-    private double money;
 
     public Milk() {
+        super();
     }
 
-    public Milk(double volume, double fat, double money) {
+    public Milk(double volume, double fat, double price) {
+        super(price);
         this.volume = volume;
         this.fat = fat;
-        this.money = money;
     }
 
     public double getVolume() {
@@ -30,20 +30,12 @@ public class Milk {
         this.fat = fat;
     }
 
-    public double getMoney() {
-        return money;
-    }
-
-    public void setMoney(double money) {
-        this.money = money;
-    }
-
     @Override
     public String toString() {
         return "Milk{" +
                 "volume=" + volume +
                 ", fat=" + fat +
-                ", money=" + money +
+                ", " + super.toString() +
                 '}';
     }
 }

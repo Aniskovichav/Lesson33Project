@@ -1,20 +1,19 @@
 package by.itstep.aniskovich.java.lesson33.model.enity;
 
-public class Water {
-    private double price;
+public class Water  extends  Product {
+    private String name;
 
     public Water() {
+        super();
     }
 
-    public Water(double price) {
-        this.price = price;
+    public Water(String name, double price) {
+        super(price);
+        this.name = name;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
+    public Water(double price, String name) {
+        super(price);
+        this.name = name;
     }
 }
