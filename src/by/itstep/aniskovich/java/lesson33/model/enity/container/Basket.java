@@ -25,7 +25,7 @@ public class Basket {
             waters = new Water[DEFAULT_SIZE];
     }
 
-    public Basket(Orange[] oranges, Milk[] milks, Bread[] breads) {
+    public Basket(Orange[] oranges, Milk[] milks, Bread[] breads, Water[] waters) {
         this.oranges = oranges;
         sizeOrange = oranges.length;
         this.milks = milks;
@@ -70,5 +70,17 @@ public class Basket {
 
     public void setBreads(Bread[] breads) {
         this.breads = breads;
+    }
+
+    public Water[] getWaters() {
+        return waters;
+    }
+
+    public int getSizeWater() {
+        return sizeWater;
+    }
+
+    public void setWaters(Water[] waters) {
+        this.waters = waters;
     }
 }
