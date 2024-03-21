@@ -11,8 +11,8 @@ public class ShopAssistanceTest {
         //arrange
         Product[] products = {new Milk(1000, 3.5, 2),
                 new Bread("Black", "first", 1.5),
-                new Orange(100, 3000, 0.5)};
-//        Water[] waters = {new Water(2)};
+                new Orange(100, 3000, 0.5),
+                new Water(2, "aqua")};
 
         Basket basket = new Basket(products);
 

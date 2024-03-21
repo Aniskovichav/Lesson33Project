@@ -2,6 +2,8 @@ package by.itstep.aniskovich.java.lesson33.model.enity.container;
 
 import by.itstep.aniskovich.java.lesson33.model.enity.*;
 
+import java.util.Arrays;
+
 public class Basket {
     public static final int DEFAULT_SIZE = 10;
 
@@ -11,12 +13,30 @@ public class Basket {
     private int size = 0;
 
     public Basket() {
-        products = new Product[DEFAULT_SIZE];
+        products = new Product[0];
     }
 
     public Basket(Product[] products) {
         this.products = products;
         size = products.length;
+    }
+
+    public void add(Product product) {
+
+
+    }
+
+    public void remove(Product product) {
+
+    }
+
+    public void remove(int index) {
+
+    }
+
+    public Product get(int index) {
+
+        return new Product();
     }
 
     public Product[] getProducts() {
@@ -28,10 +48,20 @@ public class Basket {
     }
 
     public int getSize() {
-        return size;
+        return products.length;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder("List of product: \n");
+
+        for (int i = 0; i < products.length; i++) {
+            builder.append(products[i]).append(;);
+        }
+
+        return "Basket{" +
+                "products=" + Arrays.toString(products) +
+                ", size=" + size +
+                '}';
     }
 }

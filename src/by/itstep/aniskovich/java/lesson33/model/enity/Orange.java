@@ -8,7 +8,7 @@ public class Orange extends Product {
         super();
     }
 
-    public Orange(int diameter, int vitaminC, double cost, double price) {
+    public Orange(int diameter, int vitaminC, double price) {
         super(price);
         this.diameter = diameter;
         this.vitaminC = vitaminC;
