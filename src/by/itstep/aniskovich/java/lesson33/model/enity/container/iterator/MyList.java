@@ -2,7 +2,7 @@ package by.itstep.aniskovich.java.lesson33.model.enity.container.iterator;
 
 import java.util.LinkedList;
 
-public class MyList {
+public class MyList implements Iterable{
     private LinkedList<Integer> list;
 
     public MyList() {
@@ -24,5 +24,10 @@ public class MyList {
 
     public int get(int index) {
         return list.get(index);
+    }
+
+    @Override
+    public Iterator getIterator() {
+        return new MyListIterator(this);
     }
 }
