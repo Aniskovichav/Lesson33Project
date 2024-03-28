@@ -15,7 +15,11 @@ public class MyArray {
         return array.length;
     }
 
-    int get() {
-        return array.
+    int getElement() {
+        return array[i];
+    }
+
+    boolean hasElement() {
+        return false;
     }
 }
