@@ -3,7 +3,7 @@ package by.itstep.aniskovich.java.lesson33.model.enity.container;
 import by.itstep.aniskovich.java.lesson33.model.enity.Product;
 
 public class ArrayImplementation implements Container {
-    private Product[]
+    private Product[] products;
 
     @Override
     public void add(Product product) {

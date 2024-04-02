@@ -2,9 +2,9 @@ package by.itstep.aniskovich.java.lesson33.model.enity.container;
 
 import by.itstep.aniskovich.java.lesson33.model.enity.*;
 
-import java.util.Arrays;
+import java.util.Iterator;
 
-public class Basket {
+public class Basket implements Iterable<Product>{
     public static final int DEFAULT_SIZE = 10;
 
     Container container;
@@ -44,5 +44,25 @@ public class Basket {
         }
 
         return builder.toString();
+    }
+
+    @Override
+    public Iterator<Product> iterator() {
+        return new BasketIterator();
+    }
+
+    private class BasketIterator implements Iterator<Product> {
+        private int count = 0;
+
+
+        @Override
+        public boolean hasNext() {
+            return count < container.size();
+        }
+
+        @Override
+        public Product next() {
+            return container.get(count++);
+        }
     }
 }
